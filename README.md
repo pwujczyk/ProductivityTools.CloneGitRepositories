@@ -10,7 +10,7 @@
     </a>
 </p>
 
-# Cline Git Repositories
+# Clone Git Repositories
 
 Module allows to copy list of repositories to given location. 
 
