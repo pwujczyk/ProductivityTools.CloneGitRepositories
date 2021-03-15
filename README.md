@@ -17,24 +17,22 @@ Module allows to copy list of repositories to given location.
 <!--more-->
 It helps me to store links to all external git repositories which I am interested in, so I can remove them anytime without worrying that I will lose them. 
 
+I created file which contains all repositories and invocation of it.
 <!--og-image-->
-![Display settings](Images/DisplayConfiguration.png) 
+![Display settings](Images/InitRepositories.png)
 
-Main cmdlet doesn't return any information it just move screen to the chosen side.
+And now anytime I can just invoke script to download all resources
 
-```PowerShell
-Move-ExternalDisplayToRight -Verbose
-```
+![Display settings](Images/Cloning.png)
 
-![Moving display](Images/MovingDisplay.png) 
-
-Getting details of the display returns information about all connected devices.
 
 ```PowerShell
-Get-DisplayDetails -Verbose
+[String[]]$repos=@(
+'git@github.com:tappyy/react-IS4-auth-demo.git',
+'git@github.com:fabragaMS/ADPE2E.git')
+
+Clone-GitRepositories -TargetDirectory "d:\Git-External" -Repositories $repos -Verbose
+
 ```
-
-![Display details](Images/DisplayDetails.png) 
-
 
 
